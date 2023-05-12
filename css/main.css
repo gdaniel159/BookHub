@@ -1,0 +1,249 @@
+/* | Navbar | */
+
+.navbar .navbar-brand {
+
+    display: flex;
+    align-items: center;
+
+}
+
+.navbar .navbar-brand img {
+
+    margin: 0 20px;
+    width: 50px;
+    height: 50px;
+
+}
+
+.navbar .navbar-brand .brandTitle {
+
+    font-size: 25px;
+
+}
+
+.navbar .collapse ul {
+
+    display: flex;
+    /* border: 1px solid #000; */
+    width: 100%;
+    justify-content: end;
+    align-items: center;
+
+}
+
+.navbar .collapse ul .nav-link:hover {
+
+    text-decoration: underline;
+
+}
+
+/* | Main Content | */
+
+/* Contenido de la izquierda */
+
+main {
+
+    height: 91.7vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid #000; */
+
+}
+
+main .leftContent .title {
+
+    font-size: 42px;
+    /* border:1px solid #000; */
+    line-height: 45px;
+    width: 90%;
+    margin: auto;
+    font-weight: bold   ;
+
+}
+
+main .leftContent .title .tl1 {
+
+    display: block;
+    width: 100%;
+
+}
+
+main .leftContent .title .tl2 {
+
+    display: block;
+    width: 100%;
+    text-align: center;
+
+}
+
+main .leftContent .title .tl3 {
+
+    display: block;
+    width: 100%;
+    text-align: end;
+
+}
+
+main .leftContent .contenido {
+
+    /* border: 1px solid #000; */
+    line-height: 32px;
+    text-align: justify;
+    width: 90%;
+    margin: 40px auto 0 auto;
+
+}
+
+main .leftContent .btnComprar {
+
+    /* border: 1px solid #000; */
+    width: 90%;
+    margin: 20px auto 0 auto;
+
+}
+
+/* Contenido de la derecha */
+
+main .rightContent {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid #000; */
+
+}
+
+main .rightContent .imgRepresentativa {
+
+    width: 90%;
+    height: 100%;
+    /* border: 1px solid #000; */
+
+}
+
+main .rightContent .imgRepresentativa img {
+
+    background-color: #ccc;
+    width: 100%;
+    height: 100%;
+
+}
+
+/* REGISTER STYLE */
+
+.registerContainer {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+
+}
+
+.registerContainer .register {
+
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: auto;
+
+}
+
+.registerContainer .register .formulario .topArea {
+
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.registerContainer .register .formulario .topArea span {
+
+    font-size: 20px;
+    width: 20%;
+    height: auto;
+    text-align: end;
+
+}
+
+.registerContainer .register .formulario .topArea span a {
+
+    color: #000;
+
+}
+
+.registerContainer .register .formulario .topArea span a:hover {
+
+    color: #403e3e;
+
+}
+
+.registerContainer .register .formulario input {
+
+    margin: 10px 0;
+
+}
+
+.registerContainer .register .formulario input[type=submit] {
+
+    background-color:#f7991c; 
+
+}
+
+.registerContainer .register .formulario input[type=submit]:hover {
+
+    background-color:#f7981cce;
+
+}
+
+.registerContainer .enlacesCuentas {
+
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.registerContainer .enlacesCuentas #enlaceCambioCreador:hover, .registerContainer .enlacesCuentas #enlaceCambioUsuario:hover {
+
+    text-decoration: underline;
+    cursor: pointer;
+
+}
+
+.registerContainer #registerCreador {
+
+    display: none;
+
+}
+
+/* Footer Style */
+
+.footer {
+
+    background-color: #fff;
+    box-shadow: -1px -2px 9px -5px rgba(0,0,0,0.58);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+    height: 10vh;
+
+}
+
+.footer .navbar-nav {
+
+    display: flex;
+    flex-direction: row;
+
+}
+
+.footer .navbar-nav .nav-item {
+
+    margin: 0 15px;
+
+}
+
+.footer .navbar-nav .nav-item:hover {
+
+    text-decoration: underline;
+
+}
