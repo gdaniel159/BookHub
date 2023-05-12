@@ -1,5 +1,7 @@
 <?php
 
+    session_start();
+
     // Conexion PDO
 
     $server = 'localhost';
@@ -19,6 +21,8 @@
             $pass
     
         );
+
+        // var_dump($cnx);
 
     } catch (PDOException $error) { // Aqui definimos el tipo de error que estamos buscando
 

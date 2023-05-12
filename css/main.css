@@ -58,7 +58,7 @@ main .leftContent .title {
     line-height: 45px;
     width: 90%;
     margin: auto;
-    font-weight: bold   ;
+    font-weight: bold;
 
 }
 
@@ -132,16 +132,17 @@ main .rightContent .imgRepresentativa img {
 
 /* REGISTER STYLE */
 
-.registerContainer {
+.registerContainer, .loginContainer {
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     height: 100vh;
+    /* border: 1px solid #000; */
 
 }
 
-.registerContainer .register {
+.registerContainer .register, .loginContainer .login {
 
     border: 1px solid #ccc;
     padding: 20px;
@@ -149,14 +150,14 @@ main .rightContent .imgRepresentativa img {
 
 }
 
-.registerContainer .register .formulario .topArea {
+.registerContainer .register .formulario .topArea, .loginContainer .login .formulario .topArea {
 
     display: flex;
     justify-content: space-between;
 
 }
 
-.registerContainer .register .formulario .topArea span {
+.registerContainer .register .formulario .topArea span, .loginContainer .login .formulario .topArea span {
 
     font-size: 20px;
     width: 20%;
@@ -165,31 +166,31 @@ main .rightContent .imgRepresentativa img {
 
 }
 
-.registerContainer .register .formulario .topArea span a {
+.registerContainer .register .formulario .topArea span a, .loginContainer .login .formulario .topArea span a {
 
     color: #000;
 
 }
 
-.registerContainer .register .formulario .topArea span a:hover {
+.registerContainer .register .formulario .topArea span a:hover,  .loginContainer .login .formulario .topArea span a:hover {
 
     color: #403e3e;
 
 }
 
-.registerContainer .register .formulario input {
+.registerContainer .register .formulario input, .loginContainer .login .formulario input  {
 
     margin: 10px 0;
 
 }
 
-.registerContainer .register .formulario input[type=submit] {
+.registerContainer .register .formulario input[type=submit], .loginContainer .login .formulario input[type=submit] {
 
     background-color:#f7991c; 
 
 }
 
-.registerContainer .register .formulario input[type=submit]:hover {
+.registerContainer .register .formulario input[type=submit]:hover, .loginContainer .login .formulario input[type=submit]:hover {
 
     background-color:#f7981cce;
 
@@ -226,6 +227,7 @@ main .rightContent .imgRepresentativa img {
     flex-direction: column;
     margin-top: 50px;
     height: 10vh;
+    /* border: 1px solid #000; */
 
 }
 

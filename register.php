@@ -6,7 +6,7 @@
             
             <!-- Clientes -->
 
-            <div class="col-lg-5 col-md-12 register" id="regiseterUsuario">
+            <div class="col-lg-5 col-md-8 register" id="regiseterUsuario">
 
                 <form action="" method="POST" class="formulario">
 

@@ -1,33 +1,18 @@
+<?php require_once 'conexion_bd.php'; ?>
 <?php include 'includes/header.html' ?>
 
-    <div class="container-fluid registerContainer">
+    <div class="container-fluid loginContainer">
 
         <div class="row">
-            
-            <!-- Clientes -->
 
-            <div class="col-lg-5 col-md-12 register">
+            <div class="col-lg-4 col-md-8 login">
 
-                <form action="" method="POST" class="formulario">
+                <form action="loginPDO.php" method="POST" class="formulario">
 
                     <div class="topArea">
 
-                        <h5 class="mb-3">Create a user account</h5>
+                        <h5 class="mb-3">Sign In</h5>
                         <span><a href="index.php" title="Back to main page"><i class="fas fa-arrow-left"></i></a></span>
-
-                    </div>
-
-                    <div class="col-md-12">
-
-                        <label for="name">Nombres:</label>
-                        <input type="text" class="form-control" name="name" id="name">
-
-                    </div>
-
-                    <div class="col-md-12">
-
-                        <label for="surname">Apellidos:</label>
-                        <input type="text" class="form-control" name="surname" id="surname">
 
                     </div>
 
@@ -36,70 +21,71 @@
                         <label for="correo">Correo:</label>
                         <input type="email" class="form-control" name="correo" id="correo">
 
-                    </div>
-
-                    <div class="col-md-12">
-
-                        <label for="nacimiento">Fecha de Nacimiento:</label>
-                        <input type="date" class="form-control" name="nacimiento" id="nacimiento">
-
-                    </div>
+                    </div>  
 
                     <div class="col-md-12">
 
                         <label for="password">Contraseña:</label>
                         <input type="password" class="form-control" name="password" id="password">
-                        <small class="text-dark"> <i class="fas fa-info-circle" style="color:#3498db;"></i> Passwords must be at least 6 characters.</small>
 
                     </div>
 
                     <div class="col-md-12">
 
-                        <input type="submit" class="form-control mt-3 text-dark" name="password" value="Crear una cuenta">
+                        <input type="submit" class="form-control mt-3 text-dark" name="btnLogin" id="btnLogin" value="Login">
 
                     </div>
-                    
-                    <small class="text-dark">Al crear una cuenta en BookHub, usted acepta los <a href="">terminos y condiciones</a></small>
 
                     <hr style="border:1px solid #ccc;">
 
-                    <small>Ya tienes una cuenta? <a href="login.php">Iniciar Sesion &#10097; </a></small>
+                    <small>Nuevo en BookHub? <a href="register.php">Crea tu cuenta aquí &#10097; </a></small>
+
+                    <small class="d-block mt-3">
+                    
+                        <?php if (isset($_SESSION['message'])) {?>
+                            <div class="alert alert-<?= $_SESSION['message_type'] ?> alert-dismissible fade show" role="alert" style="display:flex; justify-content: space-between;">
+                                <?= $_SESSION['message']?>
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true"><i class="fas fa-times-circle"></i></span>
+                                </button>
+                            </div>
+                        <?php }?>
+                    
+                    </small>
 
                 </form>
 
             </div>
 
-            <!-- Creadores -->
-
         </div>
 
         <div class="row">
 
-        <footer class="footer">
+            <footer class="footer">
 
-            <div class="navegacion">
+                <div class="navegacion">
 
-                <ul class="navbar-nav">
+                    <ul class="navbar-nav">
 
-                    <li class="nav-item">
+                        <li class="nav-item">
 
-                        <a class="nav-link" href="#">Sobre Nosotros</a>
+                            <a class="nav-link" href="#">Sobre Nosotros</a>
 
-                    </li>
+                        </li>
 
-                    <li class="nav-item">
+                        <li class="nav-item">
 
-                        <a class="nav-link" href="#">Terminos y Condiciones</a>
+                            <a class="nav-link" href="#">Terminos y Condiciones</a>
 
-                    </li>
+                        </li>
 
-                </ul>
+                    </ul>
 
-            </div>
+                </div>
 
-            <p class="text-muted">© 2023 BookHub, Independencia</p>
+                <p class="text-muted">© 2023 BookHub, Independencia</p>
 
-        </footer>
+            </footer>
 
         </div>
 

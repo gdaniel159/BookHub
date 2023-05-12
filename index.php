@@ -1,3 +1,4 @@
+<?php require_once 'conexion_bd.php'; ?>
 <?php include 'includes/header.html' ?>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -59,6 +60,27 @@
 
     </nav>
 
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-lg-12 mt-3">
+
+                <?php if (isset($_SESSION['message'])) {?>
+                    <div class="alert alert-<?= $_SESSION['message_type'] ?> alert-dismissible fade show" role="alert" style="display:flex; justify-content: space-between;">
+                        <?= $_SESSION['message']?>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true"><i class="fas fa-times-circle"></i></span>
+                        </button>
+                    </div>
+                <?php }?>
+
+            </div>
+
+        </div>
+
+    </div>
+
     <main class="container">
 
         <div class="row">
@@ -87,7 +109,7 @@
 
             </section>
 
-            <section class="col-lg-6 col-md-12 rightContent">
+            <section class="col-lg-6 col-md-12 rightContent mt-4">
 
                 <div class="imgRepresentativa">
 
