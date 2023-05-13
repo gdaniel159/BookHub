@@ -45,9 +45,9 @@
                         <?php if (isset($_SESSION['message'])) {?>
                             <div class="alert alert-<?= $_SESSION['message_type'] ?> alert-dismissible fade show" role="alert" style="display:flex; justify-content: space-between;">
                                 <?= $_SESSION['message']?>
-                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                    <span aria-hidden="true"><i class="fas fa-times-circle"></i></span>
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
                                 </button>
+                                <?php session_destroy(); ?>
                             </div>
                         <?php }?>
                     

@@ -1,7 +1,7 @@
 <?php require_once 'conexion_bd.php'; ?>
 <?php include 'includes/header.html' ?>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 
         <div class="container-fluid">
 
@@ -12,9 +12,9 @@
 
             </a>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="backgroung-color:#fff;">
 
-                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon" style="backgroung-color:#fff;"></span>
 
             </button>
 
@@ -69,9 +69,8 @@
                 <?php if (isset($_SESSION['message'])) {?>
                     <div class="alert alert-<?= $_SESSION['message_type'] ?> alert-dismissible fade show" role="alert" style="display:flex; justify-content: space-between;">
                         <?= $_SESSION['message']?>
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                            <span aria-hidden="true"><i class="fas fa-times-circle"></i></span>
-                        </button>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        <!-- <?php // session_destroy(); ?> -->
                     </div>
                 <?php }?>
 
@@ -103,7 +102,7 @@
 
                 <div class="btnComprar">
 
-                    <a href="" class="btn btn-success">Ir a Comprar</a>
+                    <a href="login.php" class="btn">Ir a Comprar</a>
 
                 </div>
 

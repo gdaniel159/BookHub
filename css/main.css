@@ -1,3 +1,9 @@
+body {
+
+    overflow: hidden;
+
+}
+
 /* | Navbar | */
 
 .navbar .navbar-brand {
@@ -36,6 +42,8 @@
     text-decoration: underline;
 
 }
+
+
 
 /* | Main Content | */
 
@@ -103,6 +111,18 @@ main .leftContent .btnComprar {
 
 }
 
+main .leftContent .btnComprar a {
+
+    background-color: #f7991c;
+
+}
+
+main .leftContent .btnComprar a:hover {
+
+    background-color: #f3a43e;
+
+}
+
 /* Contenido de la derecha */
 
 main .rightContent {
@@ -124,9 +144,10 @@ main .rightContent .imgRepresentativa {
 
 main .rightContent .imgRepresentativa img {
 
-    background-color: #ccc;
+    /* background-color: transparent; */
     width: 100%;
     height: 100%;
+    display: none;
 
 }
 
