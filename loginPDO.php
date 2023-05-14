@@ -11,7 +11,7 @@
 
         try {
 
-            $sql = "SELECT cau.correo, cau.contraseña, cau.nombres, cau.apellidos FROM clientes cli JOIN `cuenta usuarios` cau ON cli.id_cuenta_cliente = cau.id_cuenta WHERE cau.correo='$correo'";
+            $sql = "SELECT cau.correo, cau.contraseña, cau.nombres, cau.apellidos FROM clientes cli JOIN cuentausuarios cau ON cli.id_cuenta = cau.id_cuenta WHERE cau.correo='$correo'";
 
             $stmt = $cnx->query($sql);
             $row = $stmt->fetch(); // Uso para una consulat SELECT

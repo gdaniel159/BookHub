@@ -20,14 +20,14 @@
 
                 START TRANSACTION;
             
-                INSERT INTO `cuenta usuarios`(id_tipo_cuenta, nombres, apellidos, fecha_nacimiento, correo, contraseña) VALUES (2,'$nombres','$apellido','$fecha','$correo','$contraseña');
+                INSERT INTO cuentausuarios (id_tipo_cuenta, nombres, apellidos, fecha_nacimiento, correo, contraseña) VALUES (2,'$nombres','$apellido','$fecha','$correo','$contraseña');
 
                 -- Esta sentencia nos ayuda a almacenar el ultimo id generado por la insercion
                 -- en nuestra tabla 'cuenta usuarios'
 
                 SET @last_id = LAST_INSERT_ID();
 
-                INSERT INTO `Clientes` (id_cuenta_cliente) VALUES (@last_id);
+                INSERT INTO `clientes` (id_cuenta) VALUES (@last_id);
 
                 COMMIT;
 
