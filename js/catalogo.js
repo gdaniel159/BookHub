@@ -1,46 +1,13 @@
-// Constantes pre definidas
+fetch('http://127.0.0.1:5000/libros') 
 
-const urlApi = 'https://www.googleapis.com/books/v1/volumes?q=';
-const KEY = 'AIzaSyCNeDhhgJ6DrAM-yZfB8qya2IcAsKP5rHE';
+.then( response => {
 
-// Colocamos las URL que deseamos llamar en un array
+    console.log(response);
 
-const urls = [
+    response.json().then(data => {
 
-    // Lista de libros de programacion
+        console.log(data);
 
-    urlApi + 'Programacion+subject:programming&key=' + KEY,
+    });
 
-    // Lista de libros de psicologia
-
-    urlApi + 'Psicologia+subject:psychology&key=' + KEY,
-
-    // Lista de libros de ciencia
-
-    urlApi + 'Ciencia+subject:science&key=' + KEY,
-
-]
-
-// Crea una matriz de promesas para cada URL
-
-const promises = urls.map(url => fetch(url));
-
-// Usa Promise.all() para esperar a que todas las promesas se resuelvan
-
-Promise.all(promises)
-
-    .then(response => {
-
-        response.forEach(response => {
-
-            console.log(response);
-
-        })
-
-    })
-
-    .catch (errors => {
-
-        console.error(errors);
-
-    })
+})
