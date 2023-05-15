@@ -237,6 +237,14 @@ main .rightContent .imgRepresentativa img {
 
 }
 
+/* Catalogo Style */
+
+.catalogo {
+
+    border: 1px solid #000;
+
+}
+
 /* Footer Style */
 
 .footer {

@@ -21,7 +21,8 @@
                 session_start();
                 $_SESSION['message'] = "Bienvenido " . $row['nombres'] . ' ' . $row['apellidos'];
                 $_SESSION['message_type'] = "success";
-                header("Location: index.php");
+                $_SESSION['verificador'] = true;
+                header("Location: pagina_principal.php");
                 exit();
 
             } else {
