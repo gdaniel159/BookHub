@@ -1,6 +1,6 @@
 body {
 
-    overflow: hidden;
+    /* overflow: hidden; */
 
 }
 
@@ -242,6 +242,22 @@ main .rightContent .imgRepresentativa img {
 .catalogo {
 
     border: 1px solid #000;
+    padding: 20px;
+    height: 80vh;
+
+}
+
+.catalogo .filtros {
+
+    border: 1px solid #000;
+
+}
+
+.catalogo .libros {
+
+    border: 1px solid #000;
+    margin: auto;
+    padding: 20px;
 
 }
 

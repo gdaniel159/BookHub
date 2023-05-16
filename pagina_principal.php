@@ -58,7 +58,7 @@
 
     </div>
 
-    <div class="container-fluid">
+    <div class="container">
 
         <div class="row catalogo">
 
@@ -66,15 +66,54 @@
 
 				<div class="filtrosTitle">
 
-					<h4>Filtros</h4>
+					<h4 class="mt-2">Filtros</h4>
 
 				</div>
 
+                <div class="desplegables mt-3">
+
+                    <ul class="categoria">
+
+                        <li>
+
+                            Categoria1
+
+                            <ul class="genero">
+
+                                <li><a href="">Genero1</a></li>
+                                <li><a href="">Genero2</a></li>
+                                <li><a href="">Genero3</a></li>
+
+                            </ul>
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
 			</div>
 
-			<div class="col-lg-6 col-md-12 libros">
+			<div class="col-lg-7 col-md-12 libros">
 
-					
+                <div class="catalogoLibrosProductos">
+
+                    <h5 style="text-decoration:underline;" class="mb-3">Libros de nuestros distribuidores</h5>
+
+                    <div class="card" style="width: 230px;">
+
+                        <img src="" class="card-img-top" alt="" width="200" height="150" style="background-color:#ccc;">
+
+                        <div class="card-body">
+
+                            <h5 class="card-title productName">ProductoName</h5>
+                            <p class="card-text description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, repellendus.</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
 
 			</div>
 
