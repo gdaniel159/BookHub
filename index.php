@@ -1,5 +1,21 @@
-<?php require_once 'conexion_bd.php'; ?>
-<?php include 'includes/header.html' ?>
+<?php require_once 'model/conexion_bd.php'; ?>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookHub</title>
+    <!-- CSS Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link type="image/png" sizes="32x32" rel="icon" href="images/favicon/book_32x32.png">
+
+</head>
+<body>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 
@@ -36,7 +52,7 @@
 
                     <li class="nav-item">
 
-                        <a class="nav-link" href="login.php">Inicio Sesion</a>
+                        <a class="nav-link" href="templates/login.php">Inicio Sesion</a>
 
                     </li>
 
@@ -48,7 +64,7 @@
 
                     <div class="nav-item">
 
-                        <a class="nav-link" href="register.php">Registrarse</a>
+                        <a class="nav-link" href="templates/register.php">Registrarse</a>
 
                     </div>
 
@@ -122,4 +138,10 @@
 
     </main>
 
-<?php include 'includes/footer.html' ?>
+    <!-- JS Bootstrap -->
+    <!-- <script src="js/jquery-3.7.0.min.js" type="text/javascript"></script> -->
+    <!-- <script src="js/popper.min.js" type="text/javascript"></script> -->
+    <script src="js/bootstrap.bundle.min.js" type="text/javascript"></script>
+    <script src="js/main.js" type="text/javascript"></script>
+</body>
+</html>

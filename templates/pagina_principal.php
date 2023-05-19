@@ -1,6 +1,7 @@
-<?php require_once 'conexion_bd.php'; ?>
-<?php include 'includes/header.html' ?>
-<?php require 'verificar_sesion.php' ?>
+<?php require_once '../model/conexion_bd.php' ?>
+<?php include '../includes/header.html' ?>
+<?php require '../model/verificar_sesion.php' ?>
+<?php include '../model/manejo_categorias.php' ?>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 
@@ -26,7 +27,7 @@
                     <div class="nav-item">
 
                         <!-- Al cerrar la sesion voy a destruir la sesion existente -->
-                        <a class="nav-link" href="logout.php">Cerrar Sesion</a>
+                        <a class="nav-link" href="../model/logout.php">Cerrar Sesion</a>
 
                     </div>
 
@@ -62,11 +63,11 @@
 
         <div class="row catalogo">
 
-			<div class="col-lg-4 col-md-12 filtros">
+			<div class="col-lg-3 col-md-12 filtros p-3">
 
 				<div class="filtrosTitle">
 
-					<h4 class="mt-2">Filtros</h4>
+					<h4 class="mt-2">Filtros <i class="fas fa-filter"></i> </h4>
 
 				</div>
 
@@ -74,19 +75,11 @@
 
                     <ul class="categoria">
 
-                        <li>
-
-                            Categoria1
-
-                            <ul class="genero">
-
-                                <li><a href="">Genero1</a></li>
-                                <li><a href="">Genero2</a></li>
-                                <li><a href="">Genero3</a></li>
-
-                            </ul>
-
-                        </li>
+                        <?php foreach($categorias as $categoria) {?>
+                        
+                            <li><a href="#"><?php echo $categoria['categoria_nombre'] ?></a></li>
+                        
+                        <?php } ?>
 
                     </ul>
 
@@ -94,20 +87,15 @@
 
 			</div>
 
-			<div class="col-lg-7 col-md-12 libros">
+			<div class="col-lg-8 col-md-12 libros">
 
-                <div class="catalogoLibrosProductos">
+                <div class="catalogoLibrosProductos" style="height:auto;">
 
                     <h5 style="text-decoration:underline;" class="mb-3">Libros de nuestros distribuidores</h5>
 
-                    <div class="card" style="width: 230px;">
+                    <div id="bookContainer" class="d-flex p-3">
 
-                        <img src="" class="card-img-top" alt="" width="200" height="150" style="background-color:#ccc;">
-
-                        <div class="card-body">
-
-                            <h5 class="card-title productName">ProductoName</h5>
-                            <p class="card-text description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, repellendus.</p>
+                        <div id="message">
 
                         </div>
 
@@ -121,6 +109,6 @@
 
     </div>
 
-	<script src="js/catalogo.js" type="text/javascript"></script>
+	<script src="../js/catalogo.js" type="text/javascript"></script>
 
-<?php include 'includes/footer.html' ?>
+<?php include '../includes/footer.html' ?>

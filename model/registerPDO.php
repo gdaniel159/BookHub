@@ -40,7 +40,7 @@
                 session_start();
                 $_SESSION['message'] = "Usuario Registrado Correctamente";
                 $_SESSION['message_type'] = "success";
-                header("Location: login.php");
+                header("Location: ../templates/login.php");
                 exit();
 
             } else {
@@ -48,7 +48,7 @@
                 session_start();
                 $_SESSION['message'] = "Ingrese los datos correctos";
                 $_SESSION['message_type'] = "danger";
-                header("Location: register.php");
+                header("Location: ../templates/register.php");
                 exit();
                 
             }
@@ -58,7 +58,7 @@
             session_start();
             $_SESSION['message'] = "Error occurred: " . $e->getMessage();
             $_SESSION['message_type'] = "danger";
-            header("Location: register.php");
+            header("Location: ../templates/register.php");
             exit();
 
         }

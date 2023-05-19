@@ -5,7 +5,7 @@
 
         // Si la variable de sesión no está establecida o no es verdadera, redirige al usuario a la página de inicio de sesión u otra página de acceso
         
-        header("Location: login.php");
+        header("Location: ../templates/login.php");
         exit();
 
     }

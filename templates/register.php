@@ -1,5 +1,5 @@
-<?php require_once 'conexion_bd.php'; ?>
-<?php include 'includes/header.html' ?>
+<?php require_once '../model/conexion_bd.php'; ?>
+<?php include '../includes/header.html' ?>
 
     <div class="container-fluid registerContainer">
 
@@ -9,7 +9,7 @@
 
             <div class="col-lg-5 col-md-8 register" id="regiseterUsuario">
 
-                <form action="registerPDO.php" method="POST" class="formulario">
+                <form action="../model/registerPDO.php" method="POST" class="formulario">
 
                     <div class="topArea">
 
@@ -121,4 +121,4 @@
 
     </div>
 
-<?php include 'includes/footer.html' ?>
+<?php include '../includes/footer.html' ?>

@@ -22,7 +22,7 @@
                 $_SESSION['message'] = "Bienvenido " . $row['nombres'] . ' ' . $row['apellidos'];
                 $_SESSION['message_type'] = "success";
                 $_SESSION['verificador'] = true;
-                header("Location: pagina_principal.php");
+                header("Location: ../templates/pagina_principal.php");
                 exit();
 
             } else {
@@ -30,7 +30,7 @@
                 session_start();
                 $_SESSION['message'] = "Ingrese los datos correctos";
                 $_SESSION['message_type'] = "danger";
-                header("Location: login.php");
+                header("Location: ../templates/login.php");
                 exit();
 
             }
@@ -39,7 +39,7 @@
 
             $_SESSION['message'] = "Ocurrio un error: " .$e->getMessage();
             $_SESSION['message_type'] = "danger";
-            header("Location: login.php");
+            header("Location: ../templates/login.php");
             exit;
 
         }

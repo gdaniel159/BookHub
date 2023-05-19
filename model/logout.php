@@ -10,7 +10,7 @@
 
     // Redirige al usuario a la página de inicio de sesión u otra página deseada
     
-    header("Location: index.php");
+    header("Location: ../index.php");
     exit();
     
 ?>

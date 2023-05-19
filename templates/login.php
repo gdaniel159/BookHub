@@ -1,5 +1,5 @@
-<?php require_once 'conexion_bd.php'; ?>
-<?php include 'includes/header.html' ?>
+<?php require_once '../model/conexion_bd.php'; ?>
+<?php include '../includes/header.html'; ?>
 
     <div class="container-fluid loginContainer">
 
@@ -7,12 +7,12 @@
 
             <div class="col-lg-4 col-md-8 login">
 
-                <form action="loginPDO.php" method="POST" class="formulario">
+                <form action="../model/loginPDO.php" method="POST" class="formulario">
 
                     <div class="topArea">
 
                         <h5 class="mb-3">Sign In</h5>
-                        <span><a href="index.php" title="Back to main page"><i class="fas fa-arrow-left"></i></a></span>
+                        <span><a href="../index.php" title="Back to main page"><i class="fas fa-arrow-left"></i></a></span>
 
                     </div>
 
@@ -91,4 +91,4 @@
 
     </div>
 
-<?php include 'includes/footer.html' ?>
+<?php include '../includes/footer.html' ?>
