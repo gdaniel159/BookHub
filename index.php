@@ -12,10 +12,10 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
-    <link type="image/png" sizes="32x32" rel="icon" href="images/favicon/book_32x32.png">
+    <link type="image/png" sizes="16x16" rel="icon" href="images/favicon/icono_book_hub-min.png">
 
 </head>
-<body>
+<body id="bodyIndex">
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 
@@ -128,7 +128,7 @@
 
                 <div class="imgRepresentativa">
 
-                    <img src="" alt="" class="img-fluid">
+                    <img src="images/movil_fondo_transparente-min.png" alt="" class="img-fluid">
 
                 </div>
 

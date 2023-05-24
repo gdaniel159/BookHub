@@ -13,7 +13,7 @@ fetch('http://127.0.0.1:5000/libros')
 
         const card = document.createElement('div');
         card.className = 'card';
-        card.style = 'border:1px solid #000; margin:0 10px;'
+        card.style = 'border:1px solid #000; margin:10px 10px;'
         card.style.width = '230px';
 
         // Crear la imagen de la portada
@@ -22,8 +22,8 @@ fetch('http://127.0.0.1:5000/libros')
         image.src = book.portada;
         image.className = 'card-img-top';
         // image.alt = 'Portada del libro'; 
-        image.width = '200';
-        image.height = '150';
+        image.width = '400';
+        image.height = '320';
         image.style.backgroundColor = '#ccc';
         card.appendChild(image);
 
