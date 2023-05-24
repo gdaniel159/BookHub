@@ -34,6 +34,13 @@
 
                     <div class="col-md-12">
 
+                        <label for="gender">Genero:</label>
+                        <input type="text" class="form-control" name="gender" id="gender" placeholder="Ingrese sus genero">
+
+                    </div>
+
+                    <div class="col-md-12">
+
                         <label for="correo">Correo:</label>
                         <input type="email" class="form-control" name="correo" id="correo" placeholder="Ingrese un correo">
 

@@ -6,6 +6,7 @@
 
         $nombres = $_POST['name'];
         $apellido = $_POST['surname'];
+        $genero = $_POST['gender'];
         $correo = $_POST['correo'];
         $fecha = $_POST['nacimiento'];
         $contraseña = password_hash($_POST['password'], PASSWORD_BCRYPT);
@@ -20,7 +21,7 @@
 
                 START TRANSACTION;
             
-                INSERT INTO cuentausuarios (id_tipo_cuenta, nombres, apellidos, fecha_nacimiento, correo, contraseña) VALUES (2,'$nombres','$apellido','$fecha','$correo','$contraseña');
+                INSERT INTO cuentausuarios (id_tipo_cuenta, nombres, apellidos,genero, fecha_nacimiento, correo, contraseña) VALUES (2,'$nombres','$apellido','$genero','$fecha','$correo','$contraseña');
 
                 -- Esta sentencia nos ayuda a almacenar el ultimo id generado por la insercion
                 -- en nuestra tabla 'cuenta usuarios'
