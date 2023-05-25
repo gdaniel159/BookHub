@@ -14,7 +14,7 @@
                     <div class="topArea">
 
                         <h5 class="mb-3">Create a user account</h5>
-                        <span><a href="index.php" title="Back to main page"><i class="fas fa-arrow-left"></i></a></span>
+                        <span><a href="../index.php" title="Back to main page"><i class="fas fa-arrow-left"></i></a></span>
 
                     </div>
 

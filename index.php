@@ -23,8 +23,8 @@
 
             <a class="navbar-brand" href="">
 
-                <img src="" alt="" class="d-inline-block align-text-top img-fluid" style="background-color:#ccc;">
-                <span class="brandTitle">BookHub</span>
+                <img src="images/brand/book-text_web-min.png" alt="" class="d-inline-block align-text-top img-fluid" style="width:200px; height:auto;">
+                <!-- <span class="brandTitle">BookHub</span> -->
 
             </a>
 
@@ -36,7 +36,7 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0" >
 
                     <li class="nav-item">
 
@@ -76,26 +76,6 @@
 
     </nav>
 
-    <div class="container">
-
-        <div class="row">
-
-            <div class="col-lg-12 mt-3">
-
-                <?php if (isset($_SESSION['message'])) {?>
-                    <div class="alert alert-<?= $_SESSION['message_type'] ?> alert-dismissible fade show" role="alert" style="display:flex; justify-content: space-between;">
-                        <?= $_SESSION['message']?>
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                        <!-- <?php // session_destroy(); ?> -->
-                    </div>
-                <?php }?>
-
-            </div>
-
-        </div>
-
-    </div>
-
     <main class="container">
 
         <div class="row">
@@ -124,7 +104,7 @@
 
             </section>
 
-            <section class="col-lg-6 col-md-12 rightContent mt-4">
+            <section class="col-lg-6 col-md-12 rightContent">
 
                 <div class="imgRepresentativa">
 

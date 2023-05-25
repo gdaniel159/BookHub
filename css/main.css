@@ -52,10 +52,10 @@
 
 main {
 
-    height: 91.7vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 86vh;
     /* border: 1px solid #fff; */
 
 }
@@ -149,8 +149,7 @@ main .rightContent {
 
 main .rightContent .imgRepresentativa {
 
-    width: 90%;
-    height: 100%;
+    width: 100%;
     /* border: 1px solid #000; */
 
 }
@@ -159,7 +158,7 @@ main .rightContent .imgRepresentativa img {
 
     /* background-color: transparent; */
     width: 100%;
-    height: 100%;
+    height: auto;
 
 }
 
@@ -324,9 +323,9 @@ main .rightContent .imgRepresentativa img {
 
     }
 
-    main .leftContent {
+    main {
 
-        margin-top: 60%;
+        height: auto;
 
     }
 
