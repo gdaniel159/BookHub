@@ -1,11 +1,21 @@
 #bodyIndex {
 
     overflow: hidden;
-    background-color: #212529;
+    background-image: url('../images/Presentacion_Bookhub_fondo-min.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-color: #212529; */
 
 }
 
 /* | Navbar | */
+
+.navbar {
+
+    background: transparent;
+
+}
 
 .navbar .navbar-brand {
 

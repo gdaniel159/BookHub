@@ -17,7 +17,7 @@
 </head>
 <body id="bodyIndex">
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark">
 
         <div class="container-fluid">
 
@@ -98,7 +98,7 @@
 
                 <div class="btnComprar">
 
-                    <a href="login.php" class="btn">Ir a Comprar</a>
+                    <a href="templates/login.php" class="btn">Ir a Comprar</a>
 
                 </div>
 

@@ -9,8 +9,8 @@
 
             <a class="navbar-brand" href="">
 
-                <img src="" alt="" class="d-inline-block align-text-top img-fluid" style="background-color:#ccc;">
-                <span class="brandTitle">BookHub</span>
+                <img src="../images/brand/book-text_web-min.png" alt="" class="d-inline-block align-text-top img-fluid" style="width:200px; height:auto;">
+                <!-- <span class="brandTitle">BookHub</span> -->
 
             </a>
 
@@ -24,12 +24,12 @@
 
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
-                    <div class="nav-item">
+                    <li class="nav-item">
 
                         <!-- Al cerrar la sesion voy a destruir la sesion existente -->
-                        <a class="nav-link" href="../model/logout.php">Cerrar Sesion</a>
+                        <a class="dropdown-item" href="../model/logout.php">Cerrar Sesion</a>
 
-                    </div>
+                    </li>
 
                 </ul>
 
