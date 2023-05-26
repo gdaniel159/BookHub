@@ -4,7 +4,7 @@
     background-image: url('../images/Presentacion_Bookhub_fondo-min.png');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% 102%;
     /* background-color: #212529; */
 
 }
@@ -54,7 +54,33 @@
 
 }
 
+.navbar #desplegable {
 
+    text-align: center;
+
+}
+
+.submenu-wrap {
+
+    border: 1px solid #000;
+    color: #fff;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 320px;
+
+}
+
+.submenu-wrap .sub-menu {
+
+    background-color: #000;
+    padding: 20px;
+    margin: 10px;
+    z-index: 999;
+
+}
+
+/* https://www.youtube.com/watch?v=ybXulmeilFM&ab_channel=EasyTutorials */
 
 /* | Main Content | */
 
@@ -136,6 +162,8 @@ main .leftContent .btnComprar {
 main .leftContent .btnComprar a {
 
     background-color: #f7991c;
+    font-weight: bold;
+    color: #fff;
 
 }
 

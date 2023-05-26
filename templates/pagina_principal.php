@@ -24,11 +24,35 @@
 
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
-                    <li class="nav-item">
+                    <!-- <li class="nav-item"><a class="nav-link" href="../model/logout.php"><i class="fas fa-user"></i></a></li> -->
 
-                        <!-- Al cerrar la sesion voy a destruir la sesion existente -->
-                        <a class="dropdown-item" href="../model/logout.php">Cerrar Sesion</a>
+                    <li class="nav-item" id="desplegable">
 
+                        <a class="nav-link" href="#"><i class="fas fa-user"></i></a>
+
+                        <div class="submenu-wrap">
+
+                            <div class="sub-menu">
+
+                                <div class="user-information">
+                                    
+                                    <?php if (isset($_SESSION['nombre'])) {  ?>
+
+                                        <span class="nombre"><?= $_SESSION['nombre'] ?></span>
+
+                                    <?php } ?>
+                                    <hr>
+
+                                    <!-- Cerrar Sesion -->
+
+                                    <a class="nav-link" href="../model/logout.php">Cerrar Sesion</a>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                   
                     </li>
 
                 </ul>
@@ -46,7 +70,7 @@
             <div class="col-lg-12 mt-3">
 
                 <?php if (isset($_SESSION['message'])) {?>
-                    <div class="alert alert-<?= $_SESSION['message_type'] ?> alert-dismissible fade show" role="alert" style="display:flex; justify-content: space-between;">
+                    <div class="alert alert-<?= $_SESSION['message_type'] ?> alert-dismissible fade show" role="alert" style="display:flex; justify-content: space-between; z-index:-1;">
                         <?= $_SESSION['message']?>
                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                         <!-- <?php // session_destroy(); ?> -->

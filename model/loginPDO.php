@@ -20,6 +20,7 @@
 
                 session_start();
                 $_SESSION['message'] = "Bienvenido " . $row['nombres'] . ' ' . $row['apellidos'];
+                $_SESSION['nombre'] = $row['nombres'];
                 $_SESSION['message_type'] = "success";
                 $_SESSION['verificador'] = true;
                 header("Location: ../templates/pagina_principal.php");
