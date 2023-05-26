@@ -24,13 +24,11 @@
 
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
-                    <!-- <li class="nav-item"><a class="nav-link" href="../model/logout.php"><i class="fas fa-user"></i></a></li> -->
-
                     <li class="nav-item" id="desplegable">
 
-                        <a class="nav-link" href="#"><i class="fas fa-user"></i></a>
+                        <a class="nav-link icon-navbar" href="#" onclick="toggleMenu()"><i class="fas fa-user"></i></a>
 
-                        <div class="submenu-wrap">
+                        <div class="submenu-wrap" id="SubMenu">
 
                             <div class="sub-menu">
 
@@ -41,11 +39,37 @@
                                         <span class="nombre"><?= $_SESSION['nombre'] ?></span>
 
                                     <?php } ?>
+                                    
                                     <hr>
+
+                                    <!-- Perfil -->
+
+                                    <div class="item-text-container">
+
+                                        <span class="item-text-item text-start"><a class="nav-link" href="">Ver Perfil</a></span>
+                                        <span class="item-text-item text-end"><i class="fas fa-chevron-right"></i></span>
+                                        
+                                    </div>
+
+                                    <!-- Carrito -->
+
+                                    <div class="item-text-container">
+
+                                        <span class="item-text-item text-start"><a class="nav-link" href="">Carrito</a></span>
+                                        <span class="item-text-item text-end"><i class="fas fa-chevron-right"></i></span>
+                                        
+                                    </div>
 
                                     <!-- Cerrar Sesion -->
 
-                                    <a class="nav-link" href="../model/logout.php">Cerrar Sesion</a>
+                                    <div class="item-text-container">
+
+                                        <span class="item-text-item text-start"><a class="nav-link" href="../model/logout.php">Cerrar Sesion</a></span>
+                                        <span class="item-text-item text-end"><i class="fas fa-chevron-right"></i></span>
+                                        
+                                    </div>
+
+                                    
 
                                 </div>
 

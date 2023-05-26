@@ -1,0 +1,50 @@
+/* | Navbar | */
+
+.navbar .navbar-brand {
+
+    display: flex;
+    align-items: center;
+
+}
+
+.navbar .navbar-brand img {
+
+    margin: 0 20px;
+    width: 50px;
+    height: 50px;
+
+}
+
+.navbar .navbar-brand .brandTitle {
+
+    font-size: 25px;
+
+}
+
+.navbar .collapse ul {
+
+    display: flex;
+    /* border: 1px solid #000; */
+    width: 100%;
+    justify-content: end;
+    align-items: center;
+
+}
+
+.navbar .collapse ul .nav-link:hover {
+
+    text-decoration: underline;
+
+}
+
+.navbar #desplegable {
+
+    text-align: center;
+
+}
+
+.navbar #desplegable .icon-navbar{
+
+    font-size: 30px;
+
+}
