@@ -1,4 +1,6 @@
 <?php require_once '../../model/conexion_bd.php'; ?>
+<?php require 'model/verificar_sesion.php' ?>
+<?php include 'model/listado_clientes.php' ?>
 <?php include 'includes/header.html'; ?>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -53,5 +55,200 @@
 
     </nav>
 
-<h2>Admin Site</h2>
+    <div class="container-fluid">
+
+        <div class="row">
+
+            <div class="sub-navbar">
+
+                <ul class="sub-enlaces">
+
+                    <li><a href="solicitar_libros.php">Solicitar Libros</a></li>
+                    <li><a href="publicar_libros.php">Publicar Libros</a></li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <main class="container">
+
+        <!-- Tabla de las publicaciones -->
+
+        <section class="row">
+
+            <h3 class="mt-3 mb-3">Lista de Publicaciones</h3>
+
+			<div class="table-responsive">
+
+				<table class="table table-hover">
+
+					<thead class="table-dark text-center">
+
+						<tr>
+							<th>Nombre</th>
+							<th>Autor</th>
+							<th>Categoria</th>
+							<th>Valoracion</th>
+							<th>Costo</th>
+							<th>Ventas</th>
+							<th>Acciones</th>
+						</tr>
+
+					</thead>
+
+					<tbody class="text-center">
+
+						<tr>
+							<td>contenido1</td>
+							<td>contenido1</td>
+							<td>contenido1</td>
+							<td>contenido1</td>
+							<td>contenido1</td>
+							<td>contenido1</td>
+							<td>
+								<a href="" class="btn btn-warning">Editar</a>
+								<a href="" class="btn btn-danger">Eliminar</a>
+							</td>
+						</tr>
+
+					</tbody>
+
+				</table>
+
+			</div>
+
+        </section>
+
+		<!-- Tabla de creadores -->
+
+        <section class="row">
+
+            <h3 class="mt-3 mb-3">Lista de Creadores</h3>
+
+			<div class="table-responsive">
+
+				<table class="table table-hover">
+
+					<thead class="table-dark text-center">
+
+						<tr>
+							<th>Correo</th>
+							<th>DNI</th>
+							<th>Telefono</th>
+							<th>Nombre</th>
+							<th>Apellidos</th>
+							<th>Ganancias</th>
+							<th>Acciones</th>
+						</tr>
+
+					</thead>
+
+					<tbody class="text-center">
+
+						<tr>
+							<td>contenido1</td>
+							<td>contenido1</td>
+							<td>contenido1</td>
+							<td>contenido1</td>
+							<td>contenido1</td>
+							<td>contenido1</td>
+							<td>
+								<a href="" class="btn btn-warning">Editar</a>
+								<a href="" class="btn btn-danger">Eliminar</a>
+							</td>
+						</tr>
+
+					</tbody>
+
+				</table>
+
+			</div>
+
+        </section>
+
+		<!-- Tabla de usuarios (Clientes) -->
+
+        <section class="row">
+
+            <h3 class="mt-3 mb-3">Lista de Clientes</h3>
+
+			<div class="table-responsive">
+
+				<table class="table table-hover">
+
+					<thead class="table-dark text-center">
+
+						<tr>
+							<th>Correo</th>
+							<th>DNI</th>
+							<th>Telefono</th>
+							<th>Nombre</th>
+							<th>Apellidos</th>
+							<th title="Total de compras hechas por el usuario">Compras</th>
+							<th>Acciones</th>
+						</tr>
+
+					</thead>
+
+					<tbody class="text-center">
+
+						<?php foreach($clientes as $cliente) { ?>
+
+							<tr>
+
+								<td><?php echo $cliente['correo'] ?></td>
+								<td><?php echo $cliente['dni'] ?></td>
+								<td><?php echo $cliente['telefono'] ?></td>
+								<td><?php echo $cliente['nombres'] ?></td>
+								<td><?php echo $cliente['apellidos'] ?></td>
+								<td>contenido1</td>
+								<td>
+									<a href="" class="btn btn-warning">Editar</a>
+									<a href="" class="btn btn-danger">Eliminar</a>
+								</td>
+
+							</tr>
+
+						<?php } ?>
+
+					</tbody>
+
+				</table>
+
+			</div>
+
+        </section>
+
+    </main>
+
+	<footer class="container-fluid footer">
+
+        <div class="row navegacion">
+
+            <ul class="navbar-nav">
+
+            	<li class="nav-item">
+
+                    <a class="nav-link" href="#">Sobre Nosotros</a>
+
+                </li>
+
+                <li class="nav-item">
+
+                    <a class="nav-link" href="#">Terminos y Condiciones</a>
+
+                </li>
+
+            </ul>
+
+    	</div>
+
+        <p class="text-muted">© 2023 BookHub, Independencia</p>
+
+    </footer>
+
 <?php include 'includes/footer.html' ?>

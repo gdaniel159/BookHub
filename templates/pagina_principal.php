@@ -141,14 +141,6 @@
 
                     <h5 style="text-decoration:underline;" class="mb-3">Libros de nuestros distribuidores</h5>
 
-                    <div id="bookContainer" class="d-flex p-3">
-
-                        <div id="message">
-
-                        </div>
-
-                    </div>
-
                 </div>
 
 			</div>

@@ -11,7 +11,7 @@
 
         try {
 
-            $sql = "SELECT cau.correo, cau.contraseña, cau.nombres, cau.apellidos FROM administradores adm JOIN cuentausuarios cau ON adm.id_cuenta = cau.id_cuenta WHERE cau.correo='$correo'";
+            $sql = "SELECT cau.correo, cau.contraseña, cau.nombres, cau.apellidos, cau.id_tipo_cuenta FROM cuentausuarios cau where cau.correo = '$correo'";
 
             $stmt = $cnx->query($sql);
             $row = $stmt->fetch();
@@ -21,10 +21,26 @@
                 session_start();
                 $_SESSION['message'] = "Bienvenido " . $row['nombres'] . ' ' . $row['apellidos'];
                 $_SESSION['nombre'] = $row['nombres'];
+                $_SESSION['apellido'] = $row['apellidos'];
                 $_SESSION['message_type'] = "success";
                 $_SESSION['verificador'] = true;
-                header("Location: ../templates/pagina_principal.php");
-                exit();
+
+                if ($row['id_tipo_cuenta'] == 1) {
+
+                    header("Location: ../templates/intranet/index_admin.php");
+                    exit();
+
+                } elseif ($row['id_tipo_cuenta'] == 2) {
+
+                    header("Location: ../templates/pagina_principal.php");
+                    exit();
+
+                } elseif ($row['id_tipo_cuenta'] == 3) {
+
+                    echo 'Creador';
+                    exit();
+
+                }
 
             } else {
 

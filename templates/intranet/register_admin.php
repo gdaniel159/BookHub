@@ -1,20 +1,18 @@
-<?php require_once '../model/conexion_bd.php'; ?>
-<?php include '../includes/header.html' ?>
+<?php require_once '../../model/conexion_bd.php'; ?>
+<?php include 'includes/header.html' ?>
 
-    <div class="container-fluid registerContainer">
+    <div class="container-fluid registerAdm">
 
         <div class="row">
-            
-            <!-- Clientes -->
 
-            <div class="col-lg-5 col-md-8 register" id="regiseterUsuario">
+            <div class="col-lg-5 col-md-8 register">
 
-                <form action="../model/registerPDO.php" method="POST" class="formulario">
+                <form action="model/registerAdmPDO.php" method="POST" class="formulario">
 
                     <div class="topArea">
 
-                        <h5 class="mb-3">Create a user account</h5>
-                        <span><a href="../index.php" title="Back to main page"><i class="fas fa-arrow-left"></i></a></span>
+                        <h5 class="mb-3">Create an admin account</h5>
+                        <span><a href="../../index.php" title="Back to main page"><i class="fas fa-arrow-left"></i></a></span>
 
                     </div>
 
@@ -61,21 +59,15 @@
 
                     </div>
 
-                    <div class="col-md-12">
+                    <div class="col-md-12 mb-3">
 
                         <input type="submit" class="form-control mt-3 text-dark" name="btnRegister" value="Crear una cuenta">
 
                     </div>
-                    
+
                     <small class="text-dark">Al crear una cuenta en BookHub, usted acepta los <a href="">terminos y condiciones</a></small>
 
                     <hr style="border:1px solid #ccc;">
-
-                    <div class="enlacesCuentas">
-
-                        <small>Ya tienes una cuenta? <a href="login.php">Iniciar Sesion &#10097; </a></small>
-
-                    </div>
 
                     <small class="d-block mt-3">
                     
@@ -89,7 +81,7 @@
                         <?php }?>
                     
                     </small>
-
+            
                 </form>
 
             </div>
@@ -128,4 +120,4 @@
 
     </div>
 
-<?php include '../includes/footer.html' ?>
+<?php include 'includes/footer.html' ?>

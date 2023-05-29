@@ -48,3 +48,152 @@
     font-size: 30px;
 
 }
+
+/* Sub Navbar */
+
+.sub-navbar {
+
+    background-color: #403e3e;
+    padding: 10px;
+
+}
+
+.sub-navbar .sub-enlaces {
+
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 8px 0;
+    /* border: 1px solid #fff; */
+
+}
+
+.sub-navbar .sub-enlaces li {
+
+    display: inline;
+    margin: 0 25px;
+    padding: 5px;
+    /* border: 1px solid #000; */
+
+}
+
+.sub-navbar .sub-enlaces li a{
+
+    text-decoration: none;
+    color: #fff;
+
+}
+
+.sub-navbar .sub-enlaces li a:hover {
+
+    text-decoration: underline;
+
+}
+
+/* Register Administrador */
+
+.registerAdm {
+
+    /* border: 5px solid #000; */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.registerAdm .register {
+
+    padding: 20px;
+    margin: auto;
+    border: 1px solid #ccc;
+
+}
+
+.registerAdm .register .topArea {
+
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.registerAdm .register .topArea span {
+
+    font-size: 20px;
+    width: 20%;
+    height: auto;
+    text-align: end;
+
+}
+
+.registerAdm .register .topArea span a {
+
+    color: #000;
+
+}
+
+.registerAdm .register .topArea span a:hover {
+
+    color: #403e3e;
+
+}
+
+.registerAdm .register .formulario input[type=submit] {
+
+    background-color:#f7991c; 
+
+}
+
+.registerAdm .register .formulario input[type=submit]:hover {
+
+    background-color:#f7981cce;
+
+}
+
+/* Libros de los proveedores */
+
+#bookContainer {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* background-color: #000; */
+
+}
+
+/* Footer */
+
+.footer {
+
+    background-color: #fff;
+    box-shadow: -1px -2px 9px -5px rgba(0,0,0,0.58);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+    height: 10vh;
+    /* border: 1px solid #000; */
+
+}
+
+.footer .navbar-nav {
+
+    display: flex;
+    flex-direction: row;
+
+}
+
+.footer .navbar-nav .nav-item {
+
+    margin: 0 15px;
+
+}
+
+.footer .navbar-nav .nav-item:hover {
+
+    text-decoration: underline;
+
+}
