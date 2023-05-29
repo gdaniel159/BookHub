@@ -4,7 +4,7 @@
 
     try{
 
-        $sql = "SELECT lb.portada, lb.nombre_libro, lb.autor, cat.categoria_nombre, ge.genero_nombre, lb.id_libro FROM libros lb join categorias cat on cat.id_categoria_libro = lb.id_categoria join generos ge on ge.id_genero_libro = lb.id_genero";
+        $sql = "SELECT lb.portada, lb.nombre_libro, lb.autor, cat.categoria_nombre, ge.genero_nombre, lb.id_libro, lb.sinopsis FROM libros lb join categorias cat on cat.id_categoria_libro = lb.id_categoria join generos ge on ge.id_genero_libro = lb.id_genero";
 
         $stmt = $cnx->query($sql);
 

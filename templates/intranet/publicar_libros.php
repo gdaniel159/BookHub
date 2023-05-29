@@ -64,8 +64,11 @@
                                     <td><?php echo $publicacion['genero_nombre'] ?></td>
                                     <td><?php echo $publicacion['id_libro'] ?></td>
                                     <td>
-                                        <a href="" class="btn btn-warning">Publicar</a>
-                                        <a href="" class="btn btn-danger">Eliminar</a>
+
+                                        <?php echo '<a href="publicacion_form.php?id_libro='.$publicacion['id_libro'].'&portada='.$publicacion['portada'].'&sinopsis='.$publicacion['sinopsis'].'&autor='.$publicacion['autor'].'&categoria='.$publicacion['categoria_nombre'].'&genero='.$publicacion['genero_nombre'].'&nombre_libro='.$publicacion['nombre_libro'].'" class="btn btn-warning">Publicar</a>' ?>
+
+                                        <?php echo '<a href="model/eliminar_libro.php?id='.$publicacion["id_libro"].'" class="btn btn-danger">Eliminar</a>' ?>
+
                                     </td>
 
                                 </tr>
