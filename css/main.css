@@ -63,6 +63,7 @@
 .navbar #desplegable .icon-navbar{
 
     font-size: 30px;
+    position: relative;
 
 }
 
@@ -77,6 +78,7 @@
     max-height: 0;
     overflow: hidden;
     transition: max-height .5s ease-in-out;
+    z-index: 9999;
 
 }
 
@@ -91,7 +93,6 @@
     background-color: #000;
     padding: 20px;
     /* margin: 10px; */
-    z-index: 999;
 
 }
 
@@ -319,7 +320,7 @@ main .rightContent .imgRepresentativa img {
 
 .catalogo {
 
-    border: 1px solid #000;
+    /* border: 1px solid #000; */
     padding: 20px;
     height: auto;
 
@@ -341,10 +342,77 @@ main .rightContent .imgRepresentativa img {
 
 .catalogo .libros #bookContainer {
 
+    /* border: 1px solid #000; */
+    padding: 20px;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    /* background-color: #000; */
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+.catalogo .libros #bookContainer .card {
+
+    width: 270px;
+    margin: 10px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.catalogo .libros #bookContainer .card:hover::before {
+
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85); /* Fondo negro semitransparente */
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+
+}
+
+.catalogo .libros #bookContainer .card:hover::before {
+
+    opacity: 1;
+
+}
+
+.catalogo .libros #bookContainer .card:hover::before, .card:hover::after {
+
+    opacity: 1;
+
+}
+
+.catalogo .libros #bookContainer .card img {
+
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+}
+
+.catalogo .libros #bookContainer .card .adition-data {
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    width: 80%;
+
+}
+
+.catalogo .libros #bookContainer .card:hover .adition-data {
+
+    opacity: 1;
 
 }
 

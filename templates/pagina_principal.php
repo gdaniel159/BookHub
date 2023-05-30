@@ -1,7 +1,8 @@
 <?php require_once '../model/conexion_bd.php' ?>
-<?php include '../includes/header.html' ?>
 <?php require '../model/verificar_sesion.php' ?>
 <?php include '../model/manejo_categorias.php' ?>
+<?php include '../model/solicitar_publicados.php' ?>
+<?php include '../includes/header.html' ?>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 
@@ -91,10 +92,10 @@
 
         <div class="row">
 
-            <div class="col-lg-12 mt-3">
+            <div class="col-lg-12 mt-3 m-auto">
 
                 <?php if (isset($_SESSION['message'])) {?>
-                    <div class="alert alert-<?= $_SESSION['message_type'] ?> alert-dismissible fade show" role="alert" style="display:flex; justify-content: space-between; z-index:-1;">
+                    <div class="alert alert-<?= $_SESSION['message_type'] ?> alert-dismissible fade show" role="alert" style="display:flex; justify-content: space-between; z-index:1; position:start;">
                         <?= $_SESSION['message']?>
                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                         <!-- <?php // session_destroy(); ?> -->
@@ -137,9 +138,76 @@
 
 			<div class="col-lg-8 col-md-12 libros">
 
-                <div class="catalogoLibrosProductos" style="height:auto;">
+                <div class="catalogoProveedores" style="height:auto;">
 
                     <h5 style="text-decoration:underline;" class="mb-3">Libros de nuestros distribuidores</h5>
+                    
+                    <div id="bookContainer">
+
+                        <?php foreach($libros_publicados as $libro) { ?>
+
+                                <div class="card">
+
+                                    <img src="<?php echo $libro['portada'] ?>" alt="" class="img-fluid">
+                                    <div class="card-body">
+
+                                        <h6 class="card-title text-center"><?php echo $libro['nombre_libro'] ?></h6>
+                                        <p class="card-text text-center">Autor: <?php echo $libro['autor'] ?></p>
+                                        <p class="card-text text-dark text-center">Costo: <?php echo $libro['precio'] ?> soles</p>
+
+                                        <div class="adition-data">
+
+                                            <h4 class="text-center" style="text-decoration:underline;">Sinopsis</h4>
+
+                                            <p class="card-text"><?php echo $libro['sinopsis'] ?></p>
+                                            <p class="card-text">
+                                                <span>Categoria: </span><?php echo $libro['categoria_nombre'] ?> 
+                                            </p>
+
+                                            <p class="card-text">
+                                                <span>Genero: </span><?php echo $libro['genero_nombre'] ?>
+                                            </p>
+
+                                            <div class="funciones">
+
+                                                <p>
+                                                    <a href="#">
+                                                        <i class="fas fa-search-plus"></i>
+                                                        <span>Similares</span>
+                                                    </a>
+                                                </p>
+
+                                                <p>
+                                                    <a href="#">
+                                                        <i class="fas fa-info-circle"></i>
+                                                        <span>Detalles</span>
+                                                    </a>
+                                                </p>
+
+                                                <p>
+                                                    <a href="#">
+                                                        <i class="fas fa-cart-plus"></i>
+                                                        <span>Carrito</span>
+                                                    </a>
+                                                </p>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                        <?php } ?>
+
+                    </div>
+
+                </div>
+
+                <div class="catalogoCreadores" style="height:auto;">
+
+                    <h5 style="text-decoration:underline;" class="mb-3">Libros de nuestros creadores</h5>
 
                 </div>
 

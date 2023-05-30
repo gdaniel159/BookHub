@@ -19,18 +19,23 @@
             // Los insertamos a la publicacion
     
             $id_administrador = $libro_publicar[0][2];
-            $fecha_publicacion = new DateTime('now');
-            $fecha_formateada = $fecha_publicacion->format('Y-m-d');
+            $fecha_publicacion = date('Y-m-d');
             
-            $sql = "INSERT INTO publicaciones (id_libro,id_administrador,fecha_publicacion,precio) VALUES ('.$id_libro.','.$id_administrador.','.$fecha_formateada.','.$precio.')";
+            $sql_insert = "INSERT INTO publicaciones (id_libro, id_administrador, fecha_publicacion, precio) VALUES (?, ?, ?, ?)";
 
-            $stmt = $cnx->query($sql);
+            $stmt_insert = $cnx->prepare($sql_insert);
+
+            $stmt_insert->execute([$id_libro, $id_administrador, $fecha_publicacion, $precio]);
+
+            // Actualizamos la tabla libros
+
+            $sql_update = "UPDATE libros SET id_estado = ? WHERE id_libro = ?";
+
+            $stmt_update = $cnx->prepare($sql_update);
+            $stmt_update->execute([1, $id_libro]);
 
             header("Location: ../index_admin.php");
             exit();
-
-            // print_r($libro_publicar);
-            // print_r($id_administrador);
     
         } catch (PDOException $e) {
     

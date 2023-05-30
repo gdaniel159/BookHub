@@ -1,6 +1,7 @@
 <?php require_once '../../model/conexion_bd.php'; ?>
 <?php require 'model/verificar_sesion.php' ?>
 <?php include 'model/listado_clientes.php' ?>
+<?php include 'model/lista_publicaciones.php' ?>
 <?php include 'includes/header.html'; ?>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -102,18 +103,24 @@
 
 					<tbody class="text-center">
 
-						<tr>
-							<td>contenido1</td>
-							<td>contenido1</td>
-							<td>contenido1</td>
-							<td>contenido1</td>
-							<td>contenido1</td>
-							<td>contenido1</td>
-							<td>
-								<a href="" class="btn btn-warning">Editar</a>
-								<a href="" class="btn btn-danger">Eliminar</a>
-							</td>
-						</tr>
+						<?php foreach($publicaciones as $publicacion) { ?>
+						
+							<tr>
+
+								<td><?php echo $publicacion['nombre_libro'] ?></td>
+								<td><?php echo $publicacion['autor'] ?></td>
+								<td><?php echo $publicacion['categoria_nombre'] ?></td>
+								<td>contenido1</td>
+								<td><?php echo $publicacion['precio'] ?></td>
+								<td>contenido1</td>
+								<td>
+									<a href="" class="btn btn-warning">Editar</a>
+									<a href="" class="btn btn-danger">Eliminar</a>
+								</td>
+
+							</tr>
+						
+						<?php } ?>
 
 					</tbody>
 

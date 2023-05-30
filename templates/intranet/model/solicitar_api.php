@@ -40,7 +40,7 @@
 
         // Insert the book with the obtained category and genre IDs
         
-        $stmt = $cnx->prepare("INSERT INTO libros (id_creador, id_administrador, id_genero, id_categoria, id_estado, nombre_libro, autor, sinopsis, portada) VALUES (NULL, 1, ?, ?, NULL, ?, ?, ?, ?)");
+        $stmt = $cnx->prepare("INSERT INTO libros (id_creador, id_administrador, id_genero, id_categoria, id_estado, nombre_libro, autor, sinopsis, portada) VALUES (NULL, 1, ?, ?, 2, ?, ?, ?, ?)");
         $stmt->execute([$genero_id, $categoria_id, $titulo, $autor, $sinopsis, $portada]);
 
 
