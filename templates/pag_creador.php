@@ -1,5 +1,6 @@
 <?php require_once '../model/conexion_bd.php'; ?>
 <?php require '../model/verificar_sesion.php' ?>
+<?php require '../model/listado_pub_creador.php' ?>
 <?php include '../includes/header.html'; ?>
 
   	<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
@@ -118,34 +119,40 @@
 
 							<thead class="table-dark text-center">
 
-							<tr>
-								<th>Portada</th>
-								<th>Nombre</th>
-								<th>Estado del libro</th>
-								<th>Categoría</th>
-								<th>Género</th>
-								<th>Ventas</th>
-								<th>Código</th>
-								<th>Acciones</th>
-							</tr>
+								<tr>
+									<th>Portada</th>
+									<th>Nombre</th>
+									<th>Estado del libro</th>
+									<th>Categoría</th>
+									<th>Género</th>
+									<th>Ventas</th>
+									<th>Código</th>
+									<th>Acciones</th>
+								</tr>
 
 							</thead>
 
 							<tbody class="table-striped text-center">
 
-							<tr>
-								<td>contenido1</td>
-								<td>contenido1</td>
-								<td>contenido1</td>
-								<td>contenido1</td>
-								<td>contenido1</td>
-								<td>contenido1</td>
-								<td>contenido1</td>
-								<td>
-								<a href="" class="btn btn-info">Publicar</a>
-								<a href="" class="btn btn-danger">Eliminar</a>
-								</td>
-							</tr>
+								<?php foreach($listado_pub_creador as $publiciones) { ?>
+
+									<tr>
+
+										<td><a href="<?php echo $publiciones['portada'] ?>" target="_blank">Ver portada</a></td>
+										<td><?php echo $publiciones['nombre_libro'] ?></td>
+										<td><?php echo $publiciones['estado_nombre'] ?></td>
+										<td><?php echo $publiciones['categoria_nombre'] ?></td>
+										<td><?php echo $publiciones['genero_nombre'] ?></td>
+										<td>contenido1</td>
+										<td><?php echo $publiciones['id_libro'] ?></td>
+										<td>
+											<a href="" class="btn btn-warning">Publicar</a>
+											<a href="" class="btn btn-danger">Eliminar</a>
+										</td>
+
+									</tr>
+
+								<?php } ?>
 
 							</tbody>
 

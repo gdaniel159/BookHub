@@ -21,56 +21,56 @@
                     <div class="col-md-12">
 
                         <label for="name">Nombres:</label>
-                        <input type="text" class="form-control" name="name" id="name"  placeholder="Ingrese sus nombres">
+                        <input type="text" class="form-control" name="name" id="name"  placeholder="Ingrese sus nombres" required>
 
                     </div>
 
                     <div class="col-md-12">
 
                         <label for="surname">Apellidos:</label>
-                        <input type="text" class="form-control" name="surname" id="surname" placeholder="Ingrese sus apellidos">
+                        <input type="text" class="form-control" name="surname" id="surname" placeholder="Ingrese sus apellidos" required>
 
                     </div>
 
                     <div class="col-md-12">
 
                         <label for="gender">Genero:</label>
-                        <input type="text" class="form-control" name="gender" id="gender" placeholder="Ingrese sus genero">
+                        <input type="text" class="form-control" name="gender" id="gender" placeholder="Ingrese sus genero" required>
 
                     </div>
 
                     <div class="col-md-12">
 
                         <label for="date">Fecha nacimiento:</label>
-                        <input type="date" class="form-control" name="date" id="date">
+                        <input type="date" class="form-control" name="date" id="date" required>
 
                     </div>
 
                     <div class="col-md-12">
 
                         <label for="dni">DNI:</label>
-                        <input type="text" class="form-control" name="dni" id="dni">
+                        <input type="text" class="form-control" name="dni" id="dni" required>
 
                     </div>
 
                     <div class="col-md-12">
 
                         <label for="tel">Telefono:</label>
-                        <input type="text" class="form-control" name="tel" id="tel">
+                        <input type="text" class="form-control" name="tel" id="tel" required>
 
                     </div>
 
                     <div class="col-md-12">
 
                         <label for="correo">Correo:</label>
-                        <input type="email" class="form-control" name="correo" id="correo" placeholder="Ingrese un correo">
+                        <input type="email" class="form-control" name="correo" id="correo" placeholder="Ingrese un correo" required>
 
                     </div>
 
                     <div class="col-md-12">
 
                         <label for="password">Contraseña:</label>
-                        <input type="password" class="form-control" name="password" id="password" placeholder="Ingrese su contraseña">
+                        <input type="password" class="form-control" name="password" id="password" placeholder="Ingrese su contraseña" required>
                         <small class="text-dark"> <i class="fas fa-info-circle" style="color:#3498db;"></i> Passwords must be at least 6 characters.</small>
 
                     </div>

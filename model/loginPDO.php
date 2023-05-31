@@ -19,9 +19,11 @@
             if ($row && password_verify($password, $row['contraseña'])) {
 
                 session_start();
+
                 $_SESSION['message'] = "Bienvenido " . $row['nombres'] . ' ' . $row['apellidos'];
                 $_SESSION['nombre'] = $row['nombres'];
                 $_SESSION['apellido'] = $row['apellidos'];
+                $_SESSION['nombre_completo'] = $row['nombres'] . ' ' . $row['apellidos'];
                 $_SESSION['message_type'] = "success";
                 $_SESSION['verificador'] = true;
 

@@ -113,15 +113,13 @@
 					
 				</div>
 
+				<div class="informacion-pago text-center mt-3">
+
+                	<a href="" class="btn btn-success form-control">Comprar Todo</a>
+
+            	</div>
+
 			</div>
-
-            <div class="informacion-pago text-center">
-
-                <p>Total de todo: Suma de los precios</p>
-
-                <a href="" class="btn btn-success">Comprar Todo</a>
-
-            </div>
 
         </div>
 

@@ -8,6 +8,7 @@
     $genero = $_POST['genero'];
     $sinopsis = $_POST['synopsis'];
     $portada = $_POST['portada'];
+    $nombre_creador = $_GET['creador_nombres'];
 
     try{
 
@@ -43,17 +44,19 @@
 
         }
 
+        // Traemos el id del creador
+
+        $stmt = $cnx->prepare("SELECT id_creador FROM creadores cre join cuentausuarios cau on cau.id_cuenta = cre.id_cuenta WHERE cau.nombres = ?");
+        $stmt->execute([$nombre_creador]);
+        $id_creador = $stmt->fetchColumn();
+
         // Ahora almacenamos el libro dentro de nuestra tabla libros
 
-        $sql_libro = "INSERT INTO libros (id_creador,id_genero,id_categoria,id_estado,nombre_libro,sinopsis,portada) VALUES (?,?,?,?,?,?,?)";
+        $sql_libro = "INSERT INTO libros (id_creador,id_genero,id_categoria,id_estado,nombre_libro,autor,sinopsis,portada) VALUES (?,?,?,?,?,?,?,?)";
 
         $stmt_insert_libro = $cnx->prepare($sql_libro);
 
-        $id_creador = 3; // Coloca el valor correcto para id_creador
-
-        $stmt_insert_libro->execute([$id_creador, $id_genero, $id_categoria, 2, $nombre, $sinopsis, $portada]);
-
-        var_dump($stmt_insert_libro);
+        $stmt_insert_libro->execute([$id_creador, $id_genero, $id_categoria, 2, $nombre, $autor, $sinopsis, $portada]);
 
         if ($stmt_insert_libro) {
 
