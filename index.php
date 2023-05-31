@@ -1,5 +1,3 @@
-<?php require_once 'model/conexion_bd.php'; ?>
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -40,13 +38,13 @@
 
                     <li class="nav-item">
 
-                        <a class="nav-link active" aria-current="page" href="#">Sobre Nosotros</a>
+                        <a class="nav-link active" aria-current="page" href="about-me.php">Sobre Nosotros</a>
 
                     </li>
 
                     <li class="nav-item">
 
-                        <a class="nav-link" href="#">Terminos y Condiciones</a>
+                        <a class="nav-link" href="terminos_condiciones.php">Terminos y Condiciones</a>
 
                     </li>
 

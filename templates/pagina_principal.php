@@ -47,7 +47,7 @@
 
                                     <div class="item-text-container">
 
-                                        <span class="item-text-item text-start"><a class="nav-link" href="">Ver Perfil</a></span>
+                                        <span class="item-text-item text-start"><a class="nav-link" href="datos_cuenta.php">Ver Perfil</a></span>
                                         <span class="item-text-item text-end"><i class="fas fa-chevron-right"></i></span>
                                         
                                     </div>
@@ -56,7 +56,7 @@
 
                                     <div class="item-text-container">
 
-                                        <span class="item-text-item text-start"><a class="nav-link" href="">Carrito</a></span>
+                                        <span class="item-text-item text-start"><a class="nav-link" href="carrito_de_compras.php">Carrito</a></span>
                                         <span class="item-text-item text-end"><i class="fas fa-chevron-right"></i></span>
                                         
                                     </div>
@@ -185,7 +185,7 @@
                                                 </p>
 
                                                 <p>
-                                                    <a href="#">
+                                                    <a href="#" onclick="openCartPopup(<?php echo $libro['id_libro']; ?>)">
                                                         <i class="fas fa-cart-plus"></i>
                                                         <span>Carrito</span>
                                                     </a>
@@ -216,7 +216,5 @@
         </div>
 
     </div>
-
-	<script src="../js/catalogo.js" type="text/javascript"></script>
 
 <?php include '../includes/footer.html' ?>

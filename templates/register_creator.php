@@ -5,15 +5,15 @@
 
         <div class="row">
             
-            <!-- Clientes -->
+            <!-- Creadores -->
 
-            <div class="col-lg-5 col-md-8 register" id="regiseterUsuario">
+            <div class="col-lg-5 col-md-8 register">
 
-                <form action="../model/registerPDO.php" method="POST" class="formulario">
+                <form action="../model/registercreatorPDO.php" method="POST" class="formulario">
 
                     <div class="topArea">
 
-                        <h5 class="mb-3">Create a user account</h5>
+                        <h5 class="mb-3">Create a creator account</h5>
                         <span><a href="../index.php" title="Back to main page"><i class="fas fa-arrow-left"></i></a></span>
 
                     </div>

@@ -237,7 +237,7 @@ main .rightContent .imgRepresentativa img {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 100vh;
+    margin: 25px 0 0 0;
     /* border: 1px solid #000; */
 
 }
@@ -307,12 +307,6 @@ main .rightContent .imgRepresentativa img {
 
     text-decoration: underline;
     cursor: pointer;
-
-}
-
-.registerContainer #registerCreador {
-
-    display: none;
 
 }
 

@@ -2,6 +2,7 @@
 <?php require 'model/verificar_sesion.php' ?>
 <?php include 'model/listado_clientes.php' ?>
 <?php include 'model/lista_publicaciones.php' ?>
+<?php include 'model/listado_creadores.php' ?>
 <?php include 'includes/header.html'; ?>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -156,18 +157,24 @@
 
 					<tbody class="text-center">
 
-						<tr>
-							<td>contenido1</td>
-							<td>contenido1</td>
-							<td>contenido1</td>
-							<td>contenido1</td>
-							<td>contenido1</td>
-							<td>contenido1</td>
-							<td>
-								<a href="" class="btn btn-warning">Editar</a>
-								<a href="" class="btn btn-danger">Eliminar</a>
-							</td>
-						</tr>
+						<?php foreach($creadores as $creador) { ?>
+
+							<tr>
+
+								<td><?php echo $creador['correo'] ?></td>
+								<td><?php echo $creador['dni'] ?></td>
+								<td><?php echo $creador['telefono'] ?></td>
+								<td><?php echo $creador['nombres'] ?></td>
+								<td><?php echo $creador['apellidos'] ?></td>
+								<td>contenido1</td>
+								<td>
+									<a href="" class="btn btn-warning">Editar</a>
+									<a href="" class="btn btn-danger">Eliminar</a>
+								</td>
+
+							</tr>
+
+						<?php } ?>
 
 					</tbody>
 

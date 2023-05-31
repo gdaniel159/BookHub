@@ -1,0 +1,49 @@
+
+#navbar_about:hover{
+    color: rgb(221, 147, 9);
+}
+/* | Navbar | */
+#contenedor_navbar
+{
+    background-color: rgb(39, 39, 39);
+}
+
+@media screen and (max-width:990px) {
+
+    #bodyIndex {
+
+        overflow: scroll;
+
+    }
+
+    main {
+
+        height: auto;
+
+    }
+
+    .submenu-wrap {
+
+        position: relative;
+
+    }
+    #boton_register_creador
+    {
+        text-align: center;
+    }
+
+    img
+    {
+        width: 100%;
+    }
+    #banner_about-me-grande{
+        content: url('../images/about-me/Banner-about-me-pequeño-min.png');
+    }
+    #banner_pequeño_creator{
+        visibility: hidden;
+        position: absolute;
+    }
+    #banner_publica_gana{
+        margin-top: -50px;
+    }
+}

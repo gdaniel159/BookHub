@@ -37,7 +37,7 @@
 
                 } elseif ($row['id_tipo_cuenta'] == 3) {
 
-                    echo 'Creador';
+                    header('Location: ../templates/pag_creador.php');
                     exit();
 
                 }

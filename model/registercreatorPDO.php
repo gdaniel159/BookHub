@@ -23,14 +23,14 @@
 
                 START TRANSACTION;
             
-                INSERT INTO cuentausuarios (id_tipo_cuenta, nombres, apellidos,genero, fecha_nacimiento, dni,telefono, correo, contraseña) VALUES (2,'$nombres','$apellido','$genero','$fecha_nacimiento','$dni','$tel','$correo','$contraseña');
+                INSERT INTO cuentausuarios (id_tipo_cuenta, nombres, apellidos,genero, fecha_nacimiento, dni, telefono, correo, contraseña) VALUES (3,'$nombres','$apellido','$genero','$fecha_nacimiento','$dni','$tel','$correo','$contraseña');
 
                 -- Esta sentencia nos ayuda a almacenar el ultimo id generado por la insercion
                 -- en nuestra tabla 'cuenta usuarios'
 
                 SET @last_id = LAST_INSERT_ID();
 
-                INSERT INTO `clientes` (id_cuenta) VALUES (@last_id);
+                INSERT INTO `creadores` (id_cuenta) VALUES (@last_id);
 
                 COMMIT;
 
@@ -51,7 +51,7 @@
                 session_start();
                 $_SESSION['message'] = "Ingrese los datos correctos";
                 $_SESSION['message_type'] = "danger";
-                header("Location: ../templates/register.php");
+                header("Location: ../templates/register_creator.php");
                 exit();
                 
             }
@@ -61,7 +61,7 @@
             session_start();
             $_SESSION['message'] = "Error occurred: " . $e->getMessage();
             $_SESSION['message_type'] = "danger";
-            header("Location: ../templates/register.php");
+            header("Location: ../templates/register_creator.php");
             exit();
 
         }
