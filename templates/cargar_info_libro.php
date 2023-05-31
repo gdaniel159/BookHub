@@ -7,7 +7,7 @@
 
         <div class="col-lg-6 col-md-8 m-auto">
 
-            <form action="" method="POST" class="formulario p-3 mt-4" style="border:1px solid #ccc">
+            <form action="../model/add_book_creator.php" method="POST" class="formulario p-3 mt-4" style="border:1px solid #ccc">
 
                 <div class="topArea">
 
@@ -65,23 +65,13 @@
 
                 </div>
 
-                <!-- Fecha de Creación -->
-
-                <div class="col-md-12">
-
-                    <label for="creation-date" class="mb-3 mt-3"><strong>Fecha de Creación:</strong></label>
-
-                    <input type="date" class="form-control" name="creation-date" id="creation-date">
-
-                </div>
-
                 <!-- Portada -->
 
                 <div class="mb-3">
 
-                    <label for="formFile" class="mb-3 mt-3"><strong>Portada</strong></label>
+                    <label for="portada" class="mb-3 mt-3"><strong>Portada</strong></label>
 
-                    <input type="text" name="formFile" id="formFile" placeholder="Porfavor Ingrese la url de la imagen de la portada" class="form-control">
+                    <input type="text" name="portada" id="portada" placeholder="Porfavor Ingrese la url de la imagen de la portada" class="form-control">
 
                 </div>
                 
