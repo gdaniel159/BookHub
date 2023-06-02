@@ -42,20 +42,53 @@
 
         }
 
-        // Generamos las ventas utilizando los id_publicacion almacenados
+        // Validamos si existen compras con ese cliente
+
+        $sql = "SELECT id_cliente FROM ventas where id_cliente = '$id_cliente'";
+        $stmt = $cnx->query($sql);
+        $row = $stmt->fetch();
 
         $fecha_venta = date('Y-m-d');
-        $sql_generar_venta = "INSERT INTO ventas (id_cliente, id_publicacion, fecha) VALUES (?, ?, ?)";
-        $stmt_insert_venta = $cnx->prepare($sql_generar_venta);
 
-        foreach ($id_publicaciones as $id_publicacion) {
+        if ($row) {
 
-            $stmt_insert_venta->execute([$id_cliente, $id_publicacion, $fecha_venta]);
+            // El cliente ya tiene ventas, verificamos si tiene venta para cada id_publicacion
+            foreach ($id_publicaciones as $id_publicacion) {
+
+                $stmt = $cnx->prepare("SELECT COUNT(*) FROM ventas WHERE id_cliente = ? AND id_publicacion = ?");
+                $stmt->execute([$id_cliente, $id_publicacion]);
+                $count = $stmt->fetchColumn();
+
+                if ($count == 0) {
+                    // El cliente no tiene venta para este id_publicacion, lo agregamos
+                    $sql_generar_venta = "INSERT INTO ventas (id_cliente, id_publicacion, fecha) VALUES (?, ?, ?)";
+                    $stmt_insert_venta = $cnx->prepare($sql_generar_venta);
+                    $stmt_insert_venta->execute([$id_cliente, $id_publicacion, $fecha_venta]);
+                }
+            }
+
+            header('Location: ../templates/realizar_compra.php');
+            exit();
+
+        } else {
+
+            // Generamos las ventas utilizando los id_publicacion almacenados
+            
+            $sql_generar_venta = "INSERT INTO ventas (id_cliente, id_publicacion, fecha) VALUES (?, ?, ?)";
+            $stmt_insert_venta = $cnx->prepare($sql_generar_venta);
+
+            foreach ($id_publicaciones as $id_publicacion) {
+
+                $stmt_insert_venta->execute([$id_cliente, $id_publicacion, $fecha_venta]);
+
+            }
+
+            header("Location: ../templates/realizar_compra.php");
+            exit();
 
         }
 
-        header("Location: ../templates/realizar_compra.php");
-        exit();
+        
 
     } catch (PDOException $e) {
 
