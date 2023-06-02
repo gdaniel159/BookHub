@@ -7,7 +7,7 @@
 
         <div class="col-lg-6 col-md-8 m-auto">
 
-            <form action=<?php echo '../model/add_book_creator.php?creador_nombres='.$_SESSION['nombre_completo'].' method="POST"'?> class="formulario p-3 mt-4" style="border:1px solid #ccc">
+            <form action="<?php echo '../model/add_book_creator.php?creador_nombres='.urlencode($_SESSION['nombre']) ?>" method="POST" class="formulario p-3 mt-4" style="border:1px solid #ccc">
 
                 <div class="topArea">
 

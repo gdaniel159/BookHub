@@ -17,74 +17,99 @@
 
     </nav>
 
-    <div class="container d-flex justify-content-center align-items-center" style="height:70vh;">
+    <div class="container-fluid">
 
-        <div class="row m-auto p-4" style="border:1px solid #000">
+        <div class="row m-auto p-4">
 
-            <div class="col-md-6 text-center" style="border:1px solid #000">
+            <div class="container mt-5">
 
-                <img src="<?php echo $_GET['portada']; ?>" alt="">
+                <div class="row d-flex justify-content-center align-items-center">
 
-            </div>
+                    <div class="col-md-6 text-center" style="width:300px;height:400px;">
 
-            <div class="col-md-5 m-auto" style="border:1px solid #000">
-
-                <p>Sinopsis: <?php echo $_GET['sinopsis']; ?></p>
-                <p>Autor: <?php echo $_GET['autor']; ?></p>
-                <p>Categoria: <?php echo $_GET['categoria']; ?></p> 
-                <p>Genero: <?php echo $_GET['genero']; ?></p>
-
-            </div>
-
-            <div class="col-md-12 mt-4 p-3" style="border:1px solid #000; border-radius:5px;">
-
-                <form action="<?php echo 'model/publicar.php?id_libro='.$_GET['id_libro'].'' ?>" method="POST">
-
-                    <div class="form-group">
-
-                        <label for="precio" class="mb-2">Precio</label>
-                        <input type="text" class="form-control" id="precio" name="precio">
+                        <img src="<?php echo $_GET['portada']; ?>" alt="" class="img-fluid">
 
                     </div>
 
-                    <div class="form-group">
+                    <div class="col-md-5 p-3" style="border:1px solid #000; border-radius:10px;width:auto;">
 
-                        <input type="submit" class="btn btn-primary form-control mt-3" value="Publicar" name="btnEnviar">
+                        <h3 class="mb-3" style="text-decoration:underline;">Informacion del Libro</h3>
+
+                        <p>Sinopsis: <?php echo $_GET['sinopsis']; ?></p>
+                        <p>Autor: <?php echo $_GET['autor']; ?></p>
+                        <p>Categoria: <?php echo $_GET['categoria']; ?></p> 
+                        <p>Genero: <?php echo $_GET['genero']; ?></p>
 
                     </div>
 
-                </form>
+                </div>
 
             </div>
 
         </div>
 
+        <div class="row m-auto p-4">
+
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-md-12 mt-4 p-3">
+
+                        <form action="<?php echo 'model/publicar.php?id_libro='.$_GET['id_libro'].'' ?>" method="POST">
+
+                            <div class="form-group">
+
+                                <label for="precio" class="mb-2">Precio</label>
+                                <input type="text" class="form-control" id="precio" name="precio">
+
+                            </div>
+
+                            <div class="form-group">
+
+                                <input type="submit" class="btn btn-primary form-control mt-3" value="Publicar" name="btnEnviar">
+
+                            </div>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <footer class="container-fluid footer">
+
+            <div class="row navegacion">
+
+                <ul class="navbar-nav">
+
+                    <li class="nav-item">
+
+                        <a class="nav-link" href="#">Sobre Nosotros</a>
+
+                    </li>
+
+                    <li class="nav-item">
+
+                        <a class="nav-link" href="#">Terminos y Condiciones</a>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <p class="text-muted">© 2023 BookHub, Independencia</p>
+
+            </footer>
+
+        </div>
+
     </div>
-
-    <footer class="container-fluid footer">
-
-        <div class="row navegacion">
-
-            <ul class="navbar-nav">
-
-            	<li class="nav-item">
-
-                    <a class="nav-link" href="#">Sobre Nosotros</a>
-
-                </li>
-
-                <li class="nav-item">
-
-                    <a class="nav-link" href="#">Terminos y Condiciones</a>
-
-                </li>
-
-            </ul>
-
-    	</div>
-
-        <p class="text-muted">© 2023 BookHub, Independencia</p>
-
-    </footer>
-
 <?php include 'includes/footer.html' ?>

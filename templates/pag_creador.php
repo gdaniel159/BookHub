@@ -24,8 +24,8 @@
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
                     <li class="nav-item" id="desplegable">
-
-                        <a class="nav-link icon-navbar" href="#" onclick="toggleMenu()"><i class="fas fa-user"></i></a>
+						
+                        <a class="nav-link icon-navbar" href="#" onclick="toggleMenu()"><span style="margin-right:20px">DashBoard</span><i class="fas fa-user"></i></a>
 
                         <div class="submenu-wrap" id="SubMenu">
 
@@ -120,13 +120,13 @@
 							<thead class="table-dark text-center">
 
 								<tr>
-									<th>Portada</th>
+									<th>Codigo Libro</th>
 									<th>Nombre</th>
-									<th>Estado del libro</th>
 									<th>Categoría</th>
 									<th>Género</th>
 									<th>Ventas</th>
-									<th>Código</th>
+									<th>Estado del libro</th>
+									<th>Portada</th>
 									<th>Acciones</th>
 								</tr>
 
@@ -138,15 +138,14 @@
 
 									<tr>
 
-										<td><a href="<?php echo $publiciones['portada'] ?>" target="_blank">Ver portada</a></td>
+										<td><?php echo $publiciones['id_libro'] ?></td>
 										<td><?php echo $publiciones['nombre_libro'] ?></td>
-										<td><?php echo $publiciones['estado_nombre'] ?></td>
 										<td><?php echo $publiciones['categoria_nombre'] ?></td>
 										<td><?php echo $publiciones['genero_nombre'] ?></td>
 										<td>contenido1</td>
-										<td><?php echo $publiciones['id_libro'] ?></td>
+										<td><?php echo $publiciones['estado_nombre'] ?></td>
+										<td><a href="<?php echo $publiciones['portada'] ?>" target="_blank">Ver portada</a></td>
 										<td>
-											<a href="" class="btn btn-warning">Publicar</a>
 											<a href="" class="btn btn-danger">Eliminar</a>
 										</td>
 

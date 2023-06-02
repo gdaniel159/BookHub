@@ -1,6 +1,8 @@
 <?php require_once '../model/conexion_bd.php'; ?>
 <?php require '../model/listado_carrito_producto.php' ?>
+<?php require '../model/verificar_sesion.php' ?>
 <?php include '../includes/header.html' ?>
+<?php $id_libro = 0 ?>
 
 <div class="container-fluid">
 
@@ -88,12 +90,13 @@
 
 														<div class="acciones">
 
-															<a href="" class="btn btn-success comprar">Comprar</a>
 															<a href="" class="btn btn-danger cancelar">Cancelar</a>
 
 														</div>
 												
 													</div>
+
+													<?php $id_libro = $producto['id_libro'] ?>
 
 												<?php } ?>
 
@@ -115,7 +118,19 @@
 
 				<div class="informacion-pago text-center mt-3">
 
-                	<a href="" class="btn btn-success form-control">Comprar Todo</a>
+					<?php
+
+						// Obtén el número de elementos del arreglo
+						$num_elementos = count($productos_carrito);
+						
+						// Convertir el arreglo a una cadena de texto
+						$productos_carrito_str = urlencode(json_encode($productos_carrito));
+
+						// Generar la URL con los parámetros
+						$url = '../model/generar_compra.php?nombre_cliente=' . $_SESSION['nombre'] . '&cantidad=' . $num_elementos . '&libros=' . $productos_carrito_str;
+					?>
+
+                	<a href="<?php echo $url;?>" class="btn btn-success form-control">Comprar Todo</a>
 
             	</div>
 

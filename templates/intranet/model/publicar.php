@@ -19,13 +19,28 @@
             // Los insertamos a la publicacion
     
             $id_administrador = $libro_publicar[0][2];
+            $id_creador = $libro_publicar[0][1];
             $fecha_publicacion = date('Y-m-d');
-            
-            $sql_insert = "INSERT INTO publicaciones (id_libro, id_administrador, fecha_publicacion, precio) VALUES (?, ?, ?, ?)";
 
-            $stmt_insert = $cnx->prepare($sql_insert);
+            // Validar si es de un administrador o de un creador
 
-            $stmt_insert->execute([$id_libro, $id_administrador, $fecha_publicacion, $precio]);
+            if ($id_administrador === null) {
+
+                $sql_insert = "INSERT INTO publicaciones (id_libro, id_creador, fecha_publicacion, precio) VALUES (?, ?, ?, ?)";
+
+                $stmt_insert = $cnx->prepare($sql_insert);
+
+                $stmt_insert->execute([$id_libro, $id_creador, $fecha_publicacion, $precio]);
+
+            } else {
+
+                $sql_insert = "INSERT INTO publicaciones (id_libro, id_administrador, fecha_publicacion, precio) VALUES (?, ?, ?, ?)";
+
+                $stmt_insert = $cnx->prepare($sql_insert);
+
+                $stmt_insert->execute([$id_libro, $id_administrador, $fecha_publicacion, $precio]);
+
+            }
 
             // Actualizamos la tabla libros
 

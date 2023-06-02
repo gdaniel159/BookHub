@@ -7,11 +7,17 @@
 
     try{
 
-        $sql = "INSERT INTO carrito (id_libro,cantidad) VALUES (?,?)";
+        // Traer el id_cliente para añadir al carrito
+
+        $stmt = $cnx->prepare("SELECT id_cliente FROM clientes cli JOIN cuentausuarios cau on cau.id_cuenta = cli.id_cuenta  WHERE cau.nombres = ?");
+        $stmt->execute([$_SESSION['nombre']]);
+        $id_cliente = $stmt->fetchColumn();
+
+        $sql = "INSERT INTO carrito (id_libro,id_cliente,cantidad) VALUES (?,?,?)";
 
         $stmt_insert = $cnx->prepare($sql);
 
-        $stmt_insert->execute([$id_libro,$cantidad]);
+        $stmt_insert->execute([$id_libro,$id_cliente,$cantidad]);
 
         if ($stmt_insert) {
 

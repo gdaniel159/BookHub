@@ -38,28 +38,43 @@
             $genero_id = $cnx->lastInsertId();
         }
 
-        // Insert the book with the obtained category and genre IDs
-        
-        $stmt = $cnx->prepare("INSERT INTO libros (id_creador, id_administrador, id_genero, id_categoria, id_estado, nombre_libro, autor, sinopsis, portada) VALUES (NULL, 1, ?, ?, 2, ?, ?, ?, ?)");
-        $stmt->execute([$genero_id, $categoria_id, $titulo, $autor, $sinopsis, $portada]);
+        // Validamos si es que el libro existe o no
 
+        $stmt = $cnx->prepare("SELECT nombre_libro FROM libros WHERE nombre_libro = ?");
+        $stmt->execute([$titulo]);
+        $libro_existe = $stmt->fetchColumn();
 
-        if ($stmt) {
+        if($libro_existe) {
 
             session_start();
-            $_SESSION['message'] = "Usuario Registrado Correctamente";
-            $_SESSION['message_type'] = "success";
-            header("Location: ../publicar_libros.php");
-            exit();
+            $_SESSION['message'] = "El libro ya existe en la BD";
+            $_SESSION['message_type'] = "warning";
+            header("Location: ../index_admin.php");
 
         } else {
 
-            session_start();
-            $_SESSION['message'] = "Ingrese los datos correctos";
-            $_SESSION['message_type'] = "danger";
-            header("Location: ../solicitar_libros.php");
-            exit();
-            
+            $stmt = $cnx->prepare("INSERT INTO libros (id_creador, id_administrador, id_genero, id_categoria, id_estado, nombre_libro, autor, sinopsis, portada) VALUES (NULL, 1, ?, ?, 2, ?, ?, ?, ?)");
+            $stmt->execute([$genero_id, $categoria_id, $titulo, $autor, $sinopsis, $portada]);
+
+
+            if ($stmt) {
+
+                session_start();
+                $_SESSION['message'] = "Libro registrado correctamente";
+                $_SESSION['message_type'] = "success";
+                header("Location: ../publicar_libros.php");
+                exit();
+
+            } else {
+
+                session_start();
+                $_SESSION['message'] = "Algo salio mal";
+                $_SESSION['message_type'] = "danger";
+                header("Location: ../solicitar_libros.php");
+                exit();
+                
+            }
+
         }
 
     } catch (PDOException $e) {
