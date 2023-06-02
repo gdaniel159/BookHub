@@ -242,4 +242,54 @@
 
     </div>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        $('#btn-descargar-boleta').click(function(e) {
+
+            var encoded_user_data = '<?php echo $query_string; ?>';
+
+            var user_data = JSON.parse(decodeURIComponent(encoded_user_data));
+
+            var datosCliente_encoded = encodeURIComponent(JSON.stringify(user_data));
+
+            var id_cliente_decoded = JSON.parse(decodeURIComponent(datosCliente_encoded));
+
+            var idCliente = id_cliente_decoded[0].id_cliente;
+
+            // Realizar la solicitud AJAX para eliminar los registros del carrito
+
+            $.ajax({
+                
+                url: '../model/eliminar_carrito.php',
+                type: 'POST',
+                data: {id_cliente: idCliente},
+
+                success: function(response) {
+
+                    if (response.success) {
+
+                        // Eliminación exitosa, redirigir a la página de carrito vacío o hacer alguna otra acción
+
+                        window.location.href = '../templates/carrito_de_compras.php';
+
+                    }
+
+                },
+
+                error: function(xhr, status, error) {
+
+                    // Error en la solicitud AJAX, mostrar un mensaje de error o hacer alguna otra acción
+
+                    alert('Ocurrió un error en la solicitud AJAX.');
+                    console.log(error);
+                
+                }
+
+            });
+        });
+
+    </script>
+
 <?php include '../includes/footer.html' ?>
