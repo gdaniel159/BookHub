@@ -8,4 +8,4 @@ Aplicacion web para la venta de libros electronicos
 
     * Crear una base de datos llamada bd_bookhub
 
-- Uso de una API con la estructura predefinida para el catálogo de libros (Subire un enlace con la API que desarrolle en Python)
+- Uso de una API con la estructura predefinida para el catálogo de libros (https://github.com/gdaniel159/APILibros_Flask)
